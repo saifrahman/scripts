@@ -1,0 +1,1 @@
+curl -X POST --data-urlencode 'payload={"channel": "#grafana-notification", "username": "webhookbot", "text": "This is posted to #grafana-notification and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"}' https://hooks.slack.com/services/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
