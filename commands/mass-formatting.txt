@@ -1,0 +1,1 @@
+/d/eclipse/eclipse -application org.eclipse.jdt.core.JavaCodeFormatter  -config /d/ru_code/org.eclipse.jdt.core.prefs  /d/ru_code/platform/realunderwriting/technicalservice/ru-batch/src/main/java/com/ca/ru/batch/*/*.java

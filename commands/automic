@@ -1,0 +1,4 @@
+Logical date
+Timezone - defined at the object level
+Post processing
+static variable - keep in the db until deleted

@@ -1,0 +1,26 @@
+D:\jboss-as-7.1.1.Final\bin>standalone.bat
+http://localhost:8080 
+D:\jboss-as-7.1.1.Final\bin>jboss-cli.bat 
+[disconnected /] connect localhost:9999
+[standalone@localhost:9999 /] help
+
+jboss-cli.bat --connect command=:shutdown
+
+[standalone@localhost:9999 /] deploy  ..\..\git-workspace\micatalog\com.zafinlabs.mirev.jewel\web\target\com.zafinlabs.mirev.jewel.web.war 
+undeploy com.zafinlabs.mirev.jewel.web.war
+## hsqldb
+java -cp org.hsqldb_1.8.1.jar org.hsqldb.Server -database.0 file:library -dbname.0 library
+
+http://lmgtfy.com/?q=running+mutliple+instances+of+jvm
+http://lmgtfy.com/?q=liquibase+guide
+
+-Dcom.zafinlabs.mirev.jewel.datasource=java:/jdbc/jewelds add in standalone.bat
+
+/subsystem=datasources:read-resource(recursive=true)
+
+standalone.bat --admin-only
+
+admin/password!23
+deploy on eap
+http://localhost:8080/mancenter-3.1.4/login.jsp
+admin/admin

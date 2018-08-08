@@ -1,0 +1,88 @@
+1) point to jdk 7
+2) bin      cassandra
+INFO  06:45:56 Starting listening for CQL clients on localhost/127.0.0.1:9042 (unencrypted)...
+INFO  06:45:56 Not starting RPC server as requested. Use JMX (StorageService->startRPCServer()) or nodetool (enablethrift) to start it
+
+setx NEWVAR SOMETHING
+
+3) install and to path python 2.x)
+4) cqlsh
+5)
+6) desc kespaces
+7) create keyspace MyKeyspace with replication = {'class':'SimpleStrategy', 'replication_factor':1};
+8) use MyKeyspace
+9) cqlsh:mykeyspace> create columnfamily Users ( key varchar PRIMARY KEY,fname varchar);
+10) describe keyspace MyKeyspace
+11) set Users['saif']['fname']='saif'    => insert into users (key,fname) values ('saif','saif')
+12) set User['saif']['lname']='rahman'   => insert into users (key,lname) values ('saif','rahman');
+13) set User['saif']['email']='saifrahmans@gmail.com'
+14) count User['saif']
+15) get User['saif']
+16) del User['saif']['email']
+
+10) point back to jdk 6
+
+http://www.datastax.com/dev/blog/thrift-to-cql3
+master-less peer to peer shared nothing , based on dynamo(riak,voldermort)
+distributed, fully distributed, no s pof
+far simpler
+digest query - query result hash from different nodes , before sending the actual data
+read repair - query against a given key.
+row  level isolation without locking
+memtable is  per columnfamily written as SSTable, it is write-back cache not a write-through cache
+SStables are immutable, compaction
+cql
+paxos,
+CAP
+ca   - rdbms
+ap - couchDB, Cassandra, dynamoDb, Riak - travel sites, time series data, stock market, weather station
+cp - mongodb,hbase,redis   - master slave model
+partition tolerance - horizontal scalability, add more data like sharding, time series kind of  problems
+where consistency (eventual consistency), adjustable/tunable consistency. At the cost of performance(worse than rdbms)
+sequential write  for the log
+keyspace = db schema
+columnfamily = table
+row = row
+flexible column  = fixed column
+metadata of column is persisted
+triplet of column name , values, timestamp
+column values need not  be stored
+inverted index,
+composite column
+columns are sorted by comparator of name, row indexing
+
+Understand your application requirements
+identify access pattern
+de-normalization is your new friend, benchmark
+point lookup  no range scan/ slice query, single  seek on disk
+efficient storage model.. never does random write
+key cache - and bloom filter , probablistic model , where data is not
+
+INSERT INTO playlists (id, song_order, song_id, title, artist, album)
+  VALUES (62c36092-82a1-3a00-93d1-46196ee77205, 5,
+  7db1a490-5878-11e2-bcfd-0800200c9a67,
+  'Lata bai ', 'Lata bai', 'Sadabahar hits');
+
+  INSERT INTO playlists (id, song_order, song_id, title, artist, album)
+  VALUES (62c36092-82a1-3a00-93d1-46196ee77206, 6,
+  7db1a490-5878-11e2-bcfd-0800200c9a68,
+  'Hum baney ', 'Lata bai', 'Sadabahar hits');
+
+  UPDATE  playlists SET
+  venue= venue + { '2014-1-23 22:00'  : 'Cactus Cafe 2',
+  '2014-01-13 20:00' : 'Mohawk 3'} where id=62c36092-82a1-3a00-93d1-46196ee77204 and song_order = 3;
+
+   SELECT venue from  playlists
+   where id=62c36092-82a1-3a00-93d1-46196ee77204 and song_order = 3;
+
+
+
+********
+./cqlsh
+rm -rf ~/.cassandra/
+
+chmod 600 oneOps-private-key1
+ssh -i oneOps-private-key1 cassandra@10.74.69.59
+cqlsh `hostname -i` -u trsys_admin -p trans04admin
+show keyspaces;
+show tables;

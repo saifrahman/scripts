@@ -1,0 +1,106 @@
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.version=1 
+AND a.modelType='ZMODEL' 
+OR a.modelType='ZTEMPLATE';
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.version=1 
+AND (a.modelType='ZMODEL' OR a.modelType='ZTEMPLATE');
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.asOfDate='01-MAY-2014 13:00';
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE (a.modelId='123-456-789' AND a.version=1) 
+AND (a.modelType='ZMODEL' OR a.modelType='ZTEMPLATE');
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.someIntAttribute > 200;
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.someIntAttribute >= 100 
+AND someIntAttribute <= 300;
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.someIntAttribute BETWEEN [ 100, 300 ];
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE name LIKE '%Foo_Bar%';
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelType IN ['ZMODEL', 'ZTEMPLATE'] 
+AND a.name LIKE '%Foo_Bar%';
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelId='123-456-789' 
+AND a.someOtherDate BETWEEN [ '01-JAN-2014', '01-DEC-2014' ];
+
+FROM com.zafinlabs.mirev.jewel.Artifact a 
+WHERE a.modelType IN ['ZMODEL', 'ZTEMPLATE'] 
+AND a.name LIKE '%Foo_Bar%' 
+AND a.inceptionDate BETWEEN [ '01-JAN-2014', '01-DEC-2014' ];
+
+FROM com.zafinlabs.mirev.jewel.Artifact a
+WHERE a.modelId=:mId 
+AND a.modelType=:mType1 OR a.modelType=:mType2;
+
+FROM com.zafinlabs.mirev.jewel.Module m
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC;
+
+FROM com.zafinlabs.mirev.jewel.Module m
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name ASC, m.version DESC;
+
+FROM com.zafinlabs.mirev.jewel.Module m
+FETCH m.artifacts artifact
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name ASC, m.version DESC;
+
+FROM com.zafinlabs.mirev.jewel.Module m  
+FETCH m.artifacts artifact 
+FETCH artifact.ns ns
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC;
+
+FROM com.zafinlabs.mirev.jewel.Module m  
+FETCH m.artifacts artifact WITH artifact.artifactType = 'ZMODEL'
+FETCH artifact.ns ns 
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC;
+
+FROM com.zafinlabs.mirev.jewel.Module m  
+FETCH m.artifacts artifact WITH artifact.artifactType = 'ZMODEL'
+FETCH artifact.ns ns 
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC
+PAGE 11 SIZE 25;
+
+FROM com.zafinlabs.mirev.jewel.Module m  
+FETCH m.artifacts artifact WITH artifact.artifactType = 'ZMODEL'
+FETCH artifact.ns ns 
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC
+PAGE 11 SIZE 25
+SEEK ('M1');
+
+FROM com.zafinlabs.mirev.jewel.Module m  
+FETCH m.artifacts artifact WITH artifact.artifactType = 'ZMODEL'
+FETCH artifact.ns ns 
+WHERE m.name LIKE '%Test%'  
+ORDER BY m.name DESC
+PAGE 11 SIZE 25
+SEEK ('M1', 123);
+
+SELECT COUNT FROM com.zafinlabs.mirev.jewel.Artifact a
+WHERE a.module.name = 'M1';
+
+SELECT COUNT FROM com.zafinlabs.mirev.jewel.Artifact a;
+
+FROM com.zafinlabs.mirev.jewel.Module m;

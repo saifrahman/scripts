@@ -1,0 +1,12 @@
+SPA
+directives, extend html, 
+scope = glue between view and controller , viewModel
+filters
+data binding
+mvc
+routing
+testing
+jqLite
+Templates
+History
+Factories

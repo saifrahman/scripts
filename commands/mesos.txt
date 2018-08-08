@@ -1,0 +1,7 @@
+data centre computing 
+80% of jobs are batch but 80% of workload to services
+resource like CPU / RAM
+Master  process and slave deamons
+resource offer given by master to framework
+Allocation policy
+fw decides whether to accept or reject the resource offer based on say data  locality

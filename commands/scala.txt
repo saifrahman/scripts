@@ -1,0 +1,5 @@
+1) open eclipse 3.8 (with sacala plugin)
+2) open an existing java project with scala nature  (ScalaTestDrive)
+3) open scala interprer view (use as repl)
+4) select a code ,ctl + shift + x  to load the code in the interpreter
+5) alt + shift + x to run the scala code

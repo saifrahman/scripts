@@ -1,0 +1,6 @@
+logs formats, time format, decentralized, experts required
+collect logs and event data, democratize data, searchable fast, horizontally scalable
+logstash - collect logs
+elasticSearch - api driven
+kibana - visualize, interactive dashboard system, 
+looking at shapes and zooming in

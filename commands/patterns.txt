@@ -1,0 +1,18 @@
+association vs aggregation vs composition - idea of ownership and memory management
+split brain - network partition
+Mediator   - Air traffic controller
+Prototype - C, Chess game initial setup
+Builder - Complex internal structure . Multi course dinner
+Singleton - spring bean, system, cluster wide
+proxy - credit card is the proxy of the bank account, EJB remote / Home object, RMI
+decorator - 10 types of pizzas, 3 different toppings ,size of ,adding discount.   avoid class explosion , streams, 
+Facade - Event managers 
+Adapter - power adapter
+flyweight - fine grained instances of thousands of objects , set value and reuse the existing object, characters in a word program, String interning
+autoboxing
+chain of responsibility - way of passing request to a chain of objects , loan processing , clerk , manager, workflow, exception handling, 
+iterator - next button in the tv remote
+State - fan valve control  
+Strategy - Comparator interface
+Observer - on-line bidding, register to a bid
+Visitor - defines a new operation without changing the class. complex class hierarchy

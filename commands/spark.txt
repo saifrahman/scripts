@@ -1,0 +1,17 @@
+RDD vs dsm
+lineage vs replicate strategy for fault tolerance
+unifying batch, streaming, interactive
+hadoop is oil tanker fast (talk about move  oil between continents)
+its not OR its AND hadoop, complementary
+data locality
+primitives (create from stable storage)
+transform (lazy operations), transformation not a materialization until later
+Action return or write
+stateful processing ,spark streaming 
+-> batches of data(cached raw data) -> rdd by spark engine - > batches of processsed data
+distributed gc
+Ingestion models  - apache kafka , flume, storm
+http://horicky.blogspot.in/2013/12/spark-low-latency-massively-parallel.html
+stage , narrow / wide dependency (group by, reduce by, involves shuffling of data)
+spark is large scale compute cluster, not data cluster
+hadoop is data parallel but processing sequential.

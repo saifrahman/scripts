@@ -1,0 +1,85 @@
+1) mongod
+2) mongo
+3) Java Driver 
+4) ~/.dbshell , ~mongorc.js
+show dbs
+use mydb
+show collections
+db.testData.find()
+for (var i = 1; i <= 25; i++) db.testData.insert( { x : i } )
+
+CA-DATABASE-DEV
+
+mongod.exe --dbpath  D:\dbfiles\mongodb --setParameter textSearchEnabled=true
+
+db.txt.ensureIndex({txt: "text"})
+db.txt.insert( {txt: "I am your father, Luke"} )
+db.txt.getIndices()
+db.txt.validate()
+db.getCollection('txt').find({})
+
+db.messages_p.insert({"subject":"Joe owns a dog", "content":"Dogs are man's best friend", "likes": 60, "year":2015, "language":"english"})
+db.messages_p.insert({"subject":"Dogs eat cats and dog eats pigeons too", "content":"Cats are not evil", "likes": 30, "year":2015, "language":"english"})
+db.messages_p.insert({"subject":"Cats eat rats", "content":"Rats do not cook food", "likes": 55, "year":2014, "language":"english"})
+db.messages_p.insert({"subject":"Rats eat Joe", "content":"Joe ate a rat", "likes": 75, "year":2014, "language":"english"})
+
+db.messages_s.insert({"subject":"Rats eat Joe", "content":"Joe ate a rat", "likes": 75, "year":2014, "language":"english"})
+
+db.messages.createIndex({"subject":"text"})
+
+db.messages.find({$text: {$search: "dogs"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}})
+
+db.getCollectionNames().forEach(function(collection) {
+   indexes = db[collection].getIndexes();
+   print("Indexes for " + collection + ":");
+   printjson(indexes);
+});
+
+db.messages.dropIndex("subject_text") 
+db.messages.createIndex({"subject":"text","content":"text"})
+
+db.system.indexes.find()
+wildcard index
+db.messages.createIndex({"$**":"text"})
+
+db.messages.find({$text: {$search: "smart birds who cook"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}})
+db.messages.find({$text: {$search: "\"joe ate\""}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}})
+db.messages.find({$text: {$search: "dogs who cats dont eat ate rats \"dogs eat\" -friends"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}).explain(true)
+
+
+weighted index
+db.messages.createIndex( {"$**": "text"}, {"weights": { subject: 3, content:1 }} )
+
+
+mongod.exe --port 27017 --dbpath  D:\dbfiles\mongo-repl1 --setParameter textSearchEnabled=true  --replSet rs0
+rs.initiate() , rs.conf(), rs.status()
+mongod.exe --port 27018 --dbpath  D:\dbfiles\mongo-repl2 --setParameter textSearchEnabled=true --replSet rs0
+rs.add("BLR-LT-5BDWD02:27018")
+mongod.exe --port 27019 --dbpath  D:\dbfiles\mongo-repl3 --setParameter textSearchEnabled=true --replSet rs0
+rs.add("BLR-LT-5BDWD02:27019")
+
+mongod --configsvr --dbpath D:\dbfiles\mongo-metadata --port 27019
+mongos --configdb localhost:27019
+mongo  -- to connect to query srver   mongos
+mongod.exe --port 27020 --dbpath  D:\dbfiles\shard1 --setParameter textSearchEnabled=true
+mongod.exe --port 27021 --dbpath  D:\dbfiles\shard2 --setParameter textSearchEnabled=true
+sh.addShard( "localhost:27020" )
+sh.addShard( "localhost:27021" )
+
+use test_db
+sh.enableSharding("test_db")
+use config
+show collections
+db.shards.find()
+db.databases.find()
+db.test_collection.ensureIndex( { _id : "hashed" } )
+sh.shardCollection("test_db.test_collection", { "_id": "hashed" } )
+for (var i = 1; i <= 500; i++) db.test_collection.insert( { x : i } )
+db.test_collection.find()
+sh.status()
+
+mongo --port 27020
+show dbs
+use test_db
+show collections
+

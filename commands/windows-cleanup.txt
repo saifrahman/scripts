@@ -1,0 +1,4 @@
+1) admin tools - disk cleanup
+2) admin tools - defragment and optimize drives
+3) performance options - visual affects uncheck most of animations
+4) Control Panel\All Control Panel Items\Performance Information and Tools  - report

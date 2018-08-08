@@ -1,0 +1,4 @@
+mysqld.exe --console
+mysqladmin -u root shutdown
+mysqlshow
+mysql test

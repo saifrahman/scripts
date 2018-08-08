@@ -1,0 +1,28 @@
+BBOMBBOM - Big ball of mud
+ why do we write code that slows down - answer is we wanted to go fast.
+   slow is fast .
+   cleans a  little bit , deliberately , carefully, calmly , surgeon he has got deadline.
+   
+   how does bad s/w slow u down
+   good code should tell what it is doing, it is boring.
+   rigidity ; something breaks in dependencies
+      dependency is 
+      fragility ; something breaks into somewhere that u can not predict.  like snow flakes
+   
+    desirable part of the code is horribly coupled with undesirable part - Non reusable / immobility
+	
+	most of the software work is about management dependencies
+	
+	inexorable forces and entropy-driven processes will inevitably reduce any system to a big ball of mud.
+	
+	Shanty Towns
+Shanty Towns are easily built by unskilled labor with inexpensive materials, but the buildings are weak, function poorly, and require continuous maintenance. The same is true of much software ... where there is great pressure to get something out there as quickly as possible, and great resistance to investing up-front in design and infrastructure.
+ThrowAway Code
+Much software is written, knowing that it is not suitable for production use ... but once it exists time pressures create a powerful incentive to ship it as is rather than rewriting it. Again, the time and cost savings are immediate, while the expenses are in the future.
+	
+	high level module depend on low level modules
+	
+	change to details level affect high level policy
+	
+	Second system effect
+	

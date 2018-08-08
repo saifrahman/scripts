@@ -1,0 +1,25 @@
+1) set ORACLE_SID=MIREV
+
+2) sqlplus MICATALOG/MICATALOG
+
+3)  alter user MICATALOG identified by abc replace MICATALOG;
+
+4)  alter user MICATALOG identified by MICATALOG replace abc;
+
+sqlplus "/ as sysdba"
+passw system     -- is set as system
+http://rolfje.wordpress.com/2007/01/16/lost-oracle-sys-and-system-password/
+
+ > CREATE DIRECTORY dmpdir AS '/opt/oracle';
+ > GRANT read, write ON DIRECTORY dmpdir to MICATALOG;
+ > SELECT directory_path FROM dba_directories WHERE directory_name = 'DATA_PUMP_DIR';
+ 
+ copy it to -- D:\app\admin\mirev\dpdump,
+ use sqldeveloper, dba view, data import wizrd
+ http://www.orafaq.com/wiki/Datapump
+
+ 
+ ---------------
+ new installation in d:\app\zafin
+ 
+ Admin1234

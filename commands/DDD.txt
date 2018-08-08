@@ -1,0 +1,74 @@
+A = B
+	partners - collaborating and translation 
+	A nd C --> asymmetric relation where power lies with  decision 
+	A and D --> D does translation
+	
+	Context Map  -> direction of arrow points to who holds the power
+   models need to be clear they no need to big
+   useful models need crisp definitions for that we need bounded context
+   assertions require boundaries
+   
+   Not all of a large system will be well designed
+   you will overreach and keep trying to fix everything
+   
+   anti-corruption layer 
+   does not degenerative lead to all contexts to be corrupted
+   
+   one of the problems of breaking into smaller things
+   u end up with lot of smaller things, harder for coherence design on a larger scale
+   
+   default interchange language
+   
+   why not just logical boundaries. why different deployment
+   micro-services makes to crossing the boundary unnatural
+   It is about development
+   e.g wall between houses , physical isolation 
+   
+    precision parts have different requirements (car engine); they need to be isolated
+   low precision high
+   
+   ************
+   	onion architecture
+	core -> domain -> api -> infrastructure
+	
+	outer layer can see inner layers 
+	
+	Forget persistence ?? focus on domain
+	What about shared data and types ??
+    
+    divide and conquer 	
+	Focus is on the Business problem not a data storage, it is more
+	of a cross cutting concern
+	
+	domain is knowledge which you are trying to model through software
+	
+	DDD- is business and developers coming together 
+	
+	breaking complexity my simplifying
+	
+	Bounded context BC has a boundary, they don't share, they dont talk to each other directly only through official language.
+	what about reuse , DRY ?
+   DDD and MDM
+   
+   Ubiquitous language throughout the BC
+   
+   Domain model -> Aggregate root 
+   Aggregate -> cluster of domain objects that can be treated as a single unit, any reference from  outside the aggregate should go to the root
+   
+   Domain model -> entities ;entity is mutable because it change its attributes without changing the id
+   Domain model - value object -> simply create a new instance so it is immutable , object is created and destroyed
+   
+   overlapping and shared data
+   1) No option -> r/w from BCs to common tables
+   2) Good -> read reference data from same shared tables
+   write BC types to different tables,
+   3) Better -> Each BC persists to its own tables
+   4) Best -> just have separate dbs for each BC/ db schema, sometimes its expensive in hosted dbs
+   5) Better than best -> event sourcing, recreate the data. 
+   
+   Anemic for CRUD: It does not do anything
+	
+	Rich for DDD : constrained the domain object, lot of behaviour in it
+	 We usually don't manipulate the identity of an object, hence the setter method should be private. Only Hibernate will assign identifiers when an object is saved
+	 
+	

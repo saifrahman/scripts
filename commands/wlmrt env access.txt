@@ -1,0 +1,1 @@
+git clone https://sur000e@vcm.wal-mart.com/scm/wtms/datascope-client.git

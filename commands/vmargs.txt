@@ -1,0 +1,8 @@
+-Xms1024m -Xmx2048m -XX:PermSize=512m -XX:MaxPermSize=512m -Dspring.profiles.active="ora" -Dcluster.group.name=jewel-dev-zambo
+-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -Dcluster.group.name=jewel-dev-zambo
+
+ -XX:+UseConcMarkSweepGC     : for avoiding GC collector out of memory error
+
+ -XX:+HeapDumpOnOutOfMemoryError    :
+
+  -Dcom.sun.management.jmxremote

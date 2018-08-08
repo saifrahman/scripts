@@ -1,0 +1,20 @@
+skip list
+big O cheat sheet
+http://bigocheatsheet.com/
+Splay trees are self adjusting BST with splaying operation and recently accessed elements are quick to access again
+last element accessed is put at the root node zig,zig-zig,zag
+
+Random function
+http://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+BST -  l < n , r > n
+
+sparse table - for immutable data  MRQ  between any two elements to form range
+preprocess the results using dynamic programming  O(nlog(n)) for preprocessing
+and O(1) for query
+
+RED black is a self balancing BST
+http://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/
+
+AVL is more balanced then RB tree but also caused more rotations during insertion
+
+max heap and min heap tree - with duplicates allowed

@@ -1,0 +1,6 @@
+D:\zookeeper-3.4.9>bin\zkServer
+bin\zkCli -server 127.0.0.1:2181
+
+use cli for client to use , ls , create , get etc
+
+https://zookeeper.apache.org/doc/trunk/zookeeperStarted.html#sc_Download

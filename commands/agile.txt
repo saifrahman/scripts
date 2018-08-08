@@ -1,0 +1,50 @@
+1) Not adhoc, not unplanned , not chaotic , Not silver bullet, not for everyone
+2) Not upfront Analysis, not upfront design
+3) planned project vision, evolutionary approach
+4) Iterative,time based, responsive to business, Delivery Focussed
+5) Iteration -- 1- 4 weeks duration , deliver specific, focussed business function
+Each iteration must complete the story
+Business sees result
+Business sets and selects the story
+re-factoring
+Do the right things - quickly, efficiently(developers toolset on steroid(best tools , best cpu, best ram))
+Avoid non - value work(not means dont plan, status check, does not mean only things that happens in agile coding/testing)
+Get Better - examine old ways, dont blindly repeat a process
+
+YAGNI - You are not going to need it, unless the business says so
+Dont buid more than bare minimum, (dont mean low functionality, low design, )
+
+Agile manifesto
+Individuals and interactions over processes and tools
+working s/w over comprehensive documentation
+customer collaboration over contract negotiation
+Responding to change over following a plan
+
+light weight , low ceremony
+
+Scrum - no engineering processes, self organizing cross functional teams
+Generative behaviours rules - daily meeting
+
+Gluttony(all dimensions of project) , Lust(more and more feature),
+Sloth (we don't need testers just hire better programmers, lose quality)
+sustained pace
+Simple design, Automated testing, Test driven development , continuous integration, pair programming, refactoring(leave the trailer better then you found it)
+OPaquenes (quality opaqueness,)
+Pride (we know everything that needs to know to build the project) no learning
+wastefulness- waste of critical resources, timeboxes, how a project can be late 1 year, 1 day at a time, daily standups , measured delay in days
+Myopia - Not seeing beyond your work, treat by cross functional team
+self organize - letting the team solve the problem, does not mean chaotic
+
+Everybody a generalist
+Every one in the team attends scrum training
+1 Week scrums
+feature complete, ready to ship, production ready, approved by product owner
+architecture emerges in agile , no management interference but reality interference
+burn down chart
+
+Predictive planning vs adaptive planning
+evolutionary design,
+empirical(shower, unpredictable non-linear called people) and defined (cake, known) process
+introduce feedback loop(test, build, )
+Pair programming - driver ( logical thinking/ how) navigator (bigger picture/ why ) One full brain operating, continous review process
+conversational stories , programmers come up with innovative ideas

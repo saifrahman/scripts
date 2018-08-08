@@ -1,0 +1,9 @@
+1) mvn clean build all projects from git bash
+2) update mvn installation in eclipse
+3) On a new git worksapce import all projects 
+4) copy preferences to ws/metadata\.plugins\org.eclipse.core.runtime\.settings
+5) refresh all projects
+6) maven update all projects 
+
+
+For a new imported project , if package structure are not shown   try "mvn eclipse:eclipse"

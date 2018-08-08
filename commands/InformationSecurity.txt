@@ -1,0 +1,4 @@
+CIA - 	confidentiality , Integrity, availability
+data classification - highly restricted, confidential, internal use, public
+
+corporate vendor management

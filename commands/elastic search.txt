@@ -1,0 +1,30 @@
+realtime
+search and analytics engine
+distributed
+restful api json over http
+based on lucene
+schema free
+inverted index, 
+free text search
+proximity search , phrase search
+lucene is all about indexing ,to make data search faster, duplicate data if it helps
+index on access pattern / query not on the document 
+grep vs full text indexing
+phrase queries vs shingles
+index should  be sorted for range query or prefix query.  for that use tree or Btree
+lucene stores documents and (inverted ) indexes in different arrays
+docId , document    term ordinal, terms dictionary, postings list
+add new segments instead of insert
+In the background keep merging.
+deletion is turn off a bit
+writes are sequential, updates require new segments . never in place updates
+cache friendly and lock free
+terms are deduplicated
+lucene supports skipping to allow leapfrogging
+term vector
+faceting - compute value counts for docs , 
+what it really is a merge sort incrementally , not in call stack but an explicit stack
+lazy merge sort
+memory is proportional to query rather than collection
+solr brought webservice apis on top of  lucene and faceting. 
+enterprise data hub

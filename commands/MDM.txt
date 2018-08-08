@@ -1,0 +1,31 @@
+golden data set
+version of the data
+branching of the data
+Single source of truth for the most important information
+Relations using business rules
+Important information critical for the enterprise product, customer , channel partner, vendor
+data governance ; backup, recover/restore, archiving, data don't fall through the cracks, decision rights and policy making
+data governance is political.
+Dan Power//
+To ensure data quality, accuracy completeness, timeliness and consistency
+data degrades 1.5% per month, avoid information overload
+value of information is going to be required in balance sheet.
+Mdm hub and data bus
+Why data governance , alternative is anarchy
+Wall size picture and color coding.
+mike 2.0 information maturity model
+Master data as a true corporate asset
+Data governance council with business representation.
+It is not easy, else everyone would be doing it.
+
+Start by doing something. define where you are and where you want to be in what time , Gap analysis.
+don't try to do bottom up 
+
+1) Data governance steering committee - like a supreme court
+Strategic level. Agenda is always full
+2) Data Governance office similar to PMO
+3) Worker bees, data steward / IT steward
+
+Business needs to feel ownership , who'll pay for it. 
+Paradox is lot of support REQUIRED from IT
+

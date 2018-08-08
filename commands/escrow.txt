@@ -1,0 +1,15 @@
+http://www.usfn.org/AM/Template.cfm?Section=Home&TEMPLATE=/CM/HTMLDisplay.cfm&SECTION=Article_Library&CONTENTID=9436 
+short year  statement and  analysis
+RS cashiering
+Each day a file comes from service provider.
+Tax files - insurance file is it a reconciliation or trigger, yearly and daily files ?
+Team is doing an exception handling ? < 50  rules , add on, new exception UI Nandu.
+Main part -  Escrow Analysis and Disbursement.
+Escrow analysis documents, shivi. 
+interfaces between  escrow and rs
+Core logic is a Tax vendor
+Can a loan be escrowed , how the validation happens, should it be supported in EscrowPoc.
+2 types of  files are coming from Core Logic - initial and update information comes from them.
+comment code  for etd , eed escrow tax disbursement
+ 
+

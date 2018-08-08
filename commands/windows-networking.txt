@@ -1,0 +1,2 @@
+Win + X -> command line (as admin)
+netsh wlan set hostednetwork mode=allow ssid=saif key=abcd1234

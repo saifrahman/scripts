@@ -1,0 +1,14 @@
+<nature>org.eclipse.jdt.core.javanature</nature>  in the .project
+add the source folder in project build path
+
+eclipse -> maven install
+mvn install -> user settings
+
+eclipse preference -> run configuration -> string substitution
+
+Debug not working
+clean debug points
+clean sources
+clean all
+delete project and import again
+delete project and import again after copying sources into a new workspace

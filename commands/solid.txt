@@ -1,0 +1,210 @@
+
+No perfect design
+
+Good design - cost of change is very less, easier change. 
+Subject the design to change along the way. impossible to get it right in first attempt.
+Constantly evolve.
+continuous improvement , don't be done with it.  
+Any software that is relevant will change.
+Let go of the ego, not completely ego, then pride, be unemotional.
+Here is an idea , either follow this or come up with better
+cant follow instructions , who can only follow instructions
+
+
+
+Coding is worth mastery 
+Do not believe design is a one time activity  , everybody decides how ?
+every fool can write a code which computers can understand
+Good design
+delivery fast - velocity 2) change 3) complexity - simple is beautiful
+tell another human what computer should do.
+boy scout rule  - keep the kitchen clean
+
+
+Take time to review code and design.
+
+KISS principle , our tendency to create complex.
+simple keeps your focus. It does not detail you, solve only real problem we have
+simple fails less , resilient 
+simple easier to understand
+Inherent complexity - nature of the domain , you have to deal with
+Accidental complexity
+simple vs familiar
+hide inherent complexity and avoids accidental complexity.
+
+YAGNI - u r not gone a need it.
+u r smarter tomorrow than today, we have more data points.
+postpone is not procrastinating , yesterday , today, tomorrow
+why don't we postpone? we are scared.
+automatic verifiable , feedback loop
+
+
+cohesion - narrow focussed and does 1 thing and doing it well  - easy to change , less frequently.
+single responsibility.  SRP
+is very racist
+like things stay together unlike things stay away from each other.
+design your classes has only 1 reason to change.
+Gather together things that change for the reason.
+1 people ask to change
+
+Coupling - what you depend upon.
+cant remove all dependencies , system is so stable that it wont even run
+ - get rid of it
+ - make it lose .
+ 
+ Keep it DRY
+ duplicating code. and also effort , e.g change in schema , hbm .. client side authentication, server side authentication
+ every piece of knowledge should have single , unambiguous , authoritative representation.
+ maintenance nightmare , bug is fixed every 2 weeks.
+ simian , cpd
+ 
+ ----------------------------------------------
+ 
+ 
+ Long methods are bad - hard to test, all the permutations and combinations to test
+ hard to read, hard to remember. obscured business rules
+ hard to reuse, leads duplication
+ many reasons to change .
+ cant be optimized by jvm or person
+ lacks cohesion and high coupling
+ hard to debug
+ talk about weekend like you code 
+ SLAP - single level of abstraction principle.
+ 
+ comment - hide a bad code, dont comment refactor the code
+   - deviates code and comment , comment become stale
+   - writing is hard work , DRY
+   
+   A good code is like a joke.  never mind 
+   compose method pattern, code should be telling you the story
+   self documented code.
+   
+   delete and start over
+   delete it r
+   
+   OCP
+   
+   open close principle - open for extension (do a little more) but closed for modification(don't do differently)  a module , class, method
+   abstraction and polymorphism.
+   2 options  change the existing code or add a new module of the code
+   
+   Should have the ability to add new features to our system without having to modify our set of pre-existing classes
+   
+   code is extensible  - code is extensible for what
+   code is not infinitely extensible
+   extensible also brings complexity; 
+   
+   what kind of change you should plan for domain experts, probabilities of occurring extension
+apply YAGNI before applying OCP   
+   
+   coding is like violence  if does not work give more of it
+   ocp is by Meyer others derive from there
+   
+   new is not polymorphic
+   
+   write new code , goal is to minimize change in the existing system and add a new system
+	customer will change something else.
+   
+  polymorphic interfaces at change points   
+   
+   lets react instead of pro-acting, best predictor change is
+   past change, cover for changes
+   
+   Liskovs substitutability ; Inheritance is overused; inheritance demands more from developer 
+   inheritance should be only used for substitutability. 
+   just use containment/delegation/composition
+   strong behavioural subtyping
+   semantic interoperability of types
+   
+   the user of the base class should be able to use derived class without knowing the difference
+   
+   derived method can not be more restrictive ,
+   collection of derive does not extend from collection of base
+   
+   invariance in a stack says LIFO , Stack extends Vector
+   
+   Should I violate LSP or DRY and OCP.
+   as a user of my class I dont force u to violate
+   
+   Ruby to @Delegate , compile time meta programming
+   
+   decouple   using dependency inversion principle
+   A class should not depend on another class, but depend on the manager
+   e.g Mock testing code, Spring @Autowire
+   
+   inverting from concrete ---> concrete to concrete --> interface 
+   lower coupling
+   
+   Functional interface --> lambda expressions as implementors of functional interface
+   
+   I/f segregation principle . SRP and cohesion applied to interfaces
+   
+   Strategic design -- high level design  , rarely
+   Tactical design -- low level, hourly
+   
+   use as a vocabulary to communicate
+   
+   TDD - 
+   ---------------------------------------------
+   
+   OO invented in 1966 ALGOL (block structured language)
+   
+   function stack frame : 
+   couple of geeks moved data structure from stack to heap
+   
+   encapsulation in C perfect . data structure  struct name;
+   
+   inheritance in C : very convenient in OO
+   polymorphic : getChar from stdin , did not  matter which device
+   getChar was a polymorphic function, device independence
+   
+   polymorphism was achieved by manipulating pointers to functions
+   
+   -- why all languages are OO --> because polymorphism is so important
+   
+   A uses B , through polymorphic interfaces.
+   
+   
+   compile dependency irrespective of runtime dependency
+   
+   
+   -----
+   LSP - a square needs 1 variable ; rectangle needs 2 variables
+   
+   ---
+   DIP -- inject few things ; inject at plugin level;
+   isolate the Business rules ; dont drag the fw into guts of your application
+   
+  help us organize code -
+	
+	to simplify the compiler java avoided multiple inheritance
+	
+	SRP - Responsibility = liable to change
+	don't mix concerns in this class
+	
+	abstraction to protect from changes
+	things that represent do not share the same relation
+	
+	design by contract
+	preconditions - assertions, method signature
+	post conditions - test assertions
+	invariants - class invariant , private method throws exception,
+	used by constructor and any method which changes the state affecting the invariant
+	
+	context should have 1 owner
+	
+	In a well designed system, lower level infrastructure can be very stable as peripheral and higher level functionality evolve. 
+	
+	Make it work. Make it right. Make it fast
+	
+	DRY - ideal world better to do some duplicating , if dependency is too high with other teams "reduce duplication , but not eliminate it"
+	
+	Inheritance use for Infrastructure not domain
+	
+	Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+    Often Less is more
+	 
+	Just as it is easier to be verbose than concise, it is easier to build complex systems than it is to build simple ones
+	 
+	 
+	 

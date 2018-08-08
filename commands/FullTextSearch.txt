@@ -1,0 +1,4 @@
+Snowball  is a stemming algorithm  , stemmers
+1) Filter of stop words
+2) Stemming of derived words  
+3) Ranking of search results

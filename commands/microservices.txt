@@ -1,0 +1,21 @@
+microservice
+containerized, seconds to build, test, deploy
+bounded contexts ; properly bounded domain , polysemy 
+point to point calls
+aws lambda , charge it in microseconds
+ephemeral databases
+http://www.infoq.com/articles/microservices-intro
+Y-axis scaling.
+partial deployment with the cost of simplicity
+higher availability with the cost of consistency
+intermodule re-factoring can be very difficult, preserve modularity
+multiple platforms , languages
+
+make sure following minimum things are there before microservices go live
+Rapid provisioning
+Basic monitoring
+RAD
+devops culture
+***********************
+autonomous teams with isolated development 
+acknowledge rough and tumble of enterprise

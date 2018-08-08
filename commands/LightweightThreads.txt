@@ -1,0 +1,4 @@
+Akka io
+actors, actor systems, form a hierarchical systems , with sub tasks delegated to child actors
+error handling , error kernel pattern
+multiplexing , demultiplexing
